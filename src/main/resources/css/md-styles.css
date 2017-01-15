@@ -1,0 +1,41 @@
+h6, .h6 {
+    color: rgba(0, 0, 0, 0.45) !important;
+}
+
+.md-subheader .md-subheader-content {
+    font-size: 16px !important;
+}
+
+.md-sidenav-left {
+  position: relative;
+  display: block;
+}
+
+.main-toolbar {
+  z-index: 61;
+}
+
+md-sidenav {
+    height: 100%;
+}
+
+md-content {
+    width: 100%;
+}
+
+.nav-header {
+    background: linear-gradient(#185694, #106cc8);
+    color: rgb(255, 255, 255);
+    padding-left: 30px;
+}
+
+.nav-menu {
+    display: block;
+    line-height: 32px;
+    margin: 0;
+    padding: 8px 16px 0;
+    text-align: left;
+    width: 100%;
+    background: #0058b1;
+    color: rgba(255, 255, 255, 0.45);
+}

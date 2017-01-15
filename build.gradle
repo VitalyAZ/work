@@ -1,0 +1,49 @@
+buildscript {
+    ext {
+        springBootVersion = '1.4.2.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'war'
+apply plugin: 'application'
+
+mainClassName = 'com.myeu.ebd.App'
+version = 1.0
+
+manifest {
+    attributes 'Main-Class': 'com.myeu.ebd.App'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    springVersion = '4.3.1.RELEASE'
+}
+
+dependencies {
+    compile "org.springframework:spring-webmvc:${springVersion}"
+    compile "org.springframework:spring-core:${springVersion}"
+    compile "org.springframework:spring-web:${springVersion}"
+
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-tomcat",
+            "org.apache.tomcat.embed:tomcat-embed-jasper"
+    providedRuntime "org.springframework.boot:spring-boot-starter-tomcat"
+    testCompile "junit:junit",
+            "org.springframework:spring-test",
+            "org.springframework.boot:spring-boot-starter-test",
+            "org.powermock:powermock-api-mockito:1.6.2",
+            "org.powermock:powermock-module-junit4:1.6.2"
+}
