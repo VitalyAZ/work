@@ -1,52 +1,41 @@
-<md-card>
-    <md-card-content>
-        <h2>Formats</h2>
-        <div layout-gt-sm flex flex-gt-sm="120">
-            <paper flex>
-                <md-list ng-cloak>
-                    <!--<md-list ng-controller="ListCtrl" ng-cloak>-->
-                    <md-subheader class="md-no-sticky">From format</md-subheader>
-                    <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
-                        <p>Pain 002 version 3</p>
-                        <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
-                    </md-list-item>
-                    <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
-                        <p>Pain 008 version 3</p>
-                        <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
-                    </md-list-item>
-                </md-list>
-            </paper>
-            <paper class="paper_splitter"></paper>
-            <paper flex>
-                <md-list ng-cloak>
-                    <!--<md-list ng-controller="ListCtrl" ng-cloak>-->
-                    <md-subheader class="md-no-sticky">To format</md-subheader>
-                    <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
-                        <p>Generic format</p>
-                        <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
-                    </md-list-item>
-                    <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
-                        <p>Generic format</p>
-                        <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
-                    </md-list-item>
-                </md-list>
-            </paper>
-        </div>
-    </md-card-content>
-</md-card>
+<h3>Up to date changes</h3>
+<md-content flex layout layout-align="center">
+    <div layout-gt-sm flex flex-gt-sm="120">
+        <paper flex>
+            <md-list ng-cloak>
+                <!--<md-list ng-controller="ListCtrl" ng-cloak>-->
+                <md-subheader class="md-no-sticky">From format</md-subheader>
+                <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+                    <p>Pain 002 version 3</p>
+                    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
+                </md-list-item>
+                <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+                    <p>Pain 008 version 3</p>
+                    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
+                </md-list-item>
+            </md-list>
+        </paper>
+        <paper class="paper_splitter"></paper>
+        <paper flex>
+            <md-list ng-cloak>
+                <!--<md-list ng-controller="ListCtrl" ng-cloak>-->
+                <md-subheader class="md-no-sticky">To format</md-subheader>
+                <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+                    <p>Generic format</p>
+                    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
+                </md-list-item>
+                <md-list-item class="secondary-button-padding" ng-click="doPrimaryAction($event)">
+                    <p>Generic format</p>
+                    <md-button class="md-secondary" ng-click="doSecondaryAction($event)">INFO</md-button>
+                </md-list-item>
+            </md-list>
+        </paper>
+    </div>
+</md-content>
 <!--Search -->
-<md-card>
-    <md-card-content>
-        <h2>Search</h2>
-        <div layout-gt-sm="row">
-            <md-input-container class="md-block" flex-gt-sm>
-                <label>Attribute</label>
-                <input>
-            </md-input-container>
-            <md-input-container class="md-block" flex-gt-sm>
-                <label>Type</label>
-                <input>
-            </md-input-container>
-        </div>
-    </md-card-content>
-</md-card>
+<md-divider></md-divider>
+<md-content flex layout layout-align="center">
+    <div>
+        Search
+    </div>
+</md-content>

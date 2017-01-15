@@ -11,6 +11,10 @@ h6, .h6 {
   display: block;
 }
 
+md-content {
+  background-color: rgb(255, 255, 255) !important;
+}
+
 .main-toolbar {
   z-index: 61;
 }
