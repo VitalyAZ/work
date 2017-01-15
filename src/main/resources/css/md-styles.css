@@ -29,6 +29,10 @@ md-content {
     padding-left: 30px;
 }
 
+.paper_splitter {
+    width: 10px;
+}
+
 .nav-menu {
     display: block;
     line-height: 32px;
