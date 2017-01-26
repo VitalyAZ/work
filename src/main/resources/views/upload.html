@@ -1,0 +1,28 @@
+<div ng-controller="uploadCtrl as ctrl" ng-cloak>
+    <h3>Uploading XSD documents</h3>
+    <md-content flex layout layout-align="left">
+        <div layout-gt-md flex layout-gt-md="120">
+            <md-input-container class="file-input">
+                <label for="picture">XSD file</label>
+                <input label="Upload Images" ngf-select="upload($file)" accept=".xsd" ngf-max-size="5MB" value="test">
+                <div ng-message="maxSize">
+                    File is bigger than 5MB.
+                </div>
+            </md-input-container>
+        </div>
+    </md-content>
+    <md-content flex layout layout-align="left">
+        <div layout-gt-md flex layout-gt-md="120" ng-show="showXsdEntities">
+            <md-list ng-cloak class="full-list">
+                <md-subheader class="md-no-sticky">XSD entities</md-subheader>
+                <md-virtual-repeat-container id="vertical-container">
+                    <div md-virtual-repeat="xsdEntity in ctrl.xsdEntities" md-on-demand
+                         class="secondary-button-padding" flex ng-click="null">
+                        {{xsdEntity.path}}
+                        <md-button class="md-secondary" ng-click="showConstraints(xsdEntity)">CONSTRAINTS</md-button>
+                    </div>
+                </md-virtual-repeat-container>
+            </md-list>
+        </div>
+    </md-content>
+</div>

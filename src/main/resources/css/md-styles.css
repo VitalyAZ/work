@@ -1,3 +1,25 @@
+.file-input {
+  width: 50%;
+}
+
+.file-input {
+  width: 50%;
+}
+
+.full-list {
+    width: 100%;
+}
+
+#vertical-container {
+  height: 300px;
+  width: 100%;
+}
+
+.repeated-item {
+  height: 50px;
+  padding-top: 10px;
+}
+
 h6, .h6 {
     color: rgba(0, 0, 0, 0.45) !important;
 }

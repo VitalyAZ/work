@@ -15,14 +15,18 @@
     <script type="text/javascript" src="js/angular-aria.min.js"></script>
     <script type="text/javascript" src="js/angular-messages.min.js"></script>
     <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/ng-file-upload.min.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/factories/sql-factory.js"></script>
     <script type="text/javascript" src="app/controllers/default-controller.js"></script>
+    <script type="text/javascript" src="app/controllers/upload-controller.js"></script>
     <script type="text/javascript" src="app/directives/group-directive.js"></script>
     <script type="text/javascript" src="app/directives/sql-names-directive.js"></script>
+
+
 </head>
 <body>
 <div layout="row" ng-controller="defaultCtrl">
@@ -50,6 +54,15 @@
                     <div class="md-list-item-text">
                         <h3>History</h3>
                         <h6>Restore and edit previous versions</h6>
+                    </div>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-subheader class="md-no-sticky">Upload</md-subheader>
+                <md-list-item class="md-2-line" ng-href="/upload">
+                    <img ng-src="{{todos[0].face}}?20" class="md-avatar" alt="{{todos[0].who}}"/>
+                    <div class="md-list-item-text">
+                        <h3>XSD</h3>
+                        <h6>xxx</h6>
                     </div>
                 </md-list-item>
                 <md-divider></md-divider>

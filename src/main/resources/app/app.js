@@ -1,7 +1,7 @@
 var ngSQLManager = angular
         .module(
             'ngSQLManager',
-            ['ngResource', 'ngRoute', 'ngMaterial']
+            ['ngResource', 'ngRoute', 'ngMaterial', 'ngFileUpload']
         )
         .config(['$routeProvider', '$locationProvider',
             function ($routeProvider, $locationProvider) {
@@ -21,6 +21,9 @@ var ngSQLManager = angular
                 })
                 .when("/history", {
                     templateUrl : "views/history.html"
+                })
+                .when("/upload", {
+                    templateUrl : "views/upload.html"
                 })
             }
         ]);
