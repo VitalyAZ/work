@@ -40,21 +40,29 @@ $scope.showXsdEntities = false;
                }
             };
 
-        $scope.upload = function(file) {
+        $scope.upload = function(file, docType) {
             console.log (file);
+            $scope.fileName = file.name
             var fd = new FormData();
             fd.append('file', file);
             if (file) {
                 $http({
                     method: 'POST',
-                    url: '/upload',
+                    url: '/upload/' + docType,
                     data: fd,
                     headers: { 'Content-Type': undefined },
                     transformRequest: angular.identity
                 }).then(function(response) {
                     console.log ("Upload successful.");
                     console.log (JSON.stringify(response));
-                    $scope.showXsdEntities = true;
+
+                    if ('xsd' == docType) {
+                        $scope.showXsdEntities = true;
+                    } else {
+                        console.log ("Show xls true");
+                    }
+
+
                 }, function(err){
                     console.log (err);
                 });

@@ -14,11 +14,12 @@ import java.util.List;
  * @author Vitalii Zenchenko
  */
 @RestController
+@RequestMapping("/upload")
 public class UploadController {
     private static final List<XsdEntity> XSD_ENTITIES =  new ArrayList<>();
 
-    @RequestMapping("/upload")
-    public void upload(@RequestParam("file") MultipartFile file) {
+    @RequestMapping("/xsd")
+    public void uploadXsd(@RequestParam("file") MultipartFile file) {
         try {
             String rootDirectory = "C:\\prj\\ebd\\uploaded_files\\";
             System.err.println("Root Directory " + rootDirectory);
@@ -44,6 +45,28 @@ public class UploadController {
         }
     }
 
+    @RequestMapping("/xlsx")
+    public void uploadXls(@RequestParam("file") MultipartFile file) {
+        try {
+            String rootDirectory = "C:\\prj\\ebd\\uploaded_files\\xlsx\\";
+            System.err.println("Root Directory " + rootDirectory);
+            try {
+                file.transferTo(new File(rootDirectory + new File(file.getOriginalFilename()).getName()));
+            } catch (IllegalStateException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+
+    }
+
     @RequestMapping("/upload_more")
     public List<XsdEntity> upload(@RequestParam("size") int size) {
         if (size > XSD_ENTITIES.size())
@@ -52,6 +75,8 @@ public class UploadController {
         System.err.println("upload XSD_ENTITIES " + XSD_ENTITIES.size());
         return size == XSD_ENTITIES.size() ? XSD_ENTITIES :  XSD_ENTITIES.subList(0, size);
     }
+
+
 }
 
 class XsdEntity {
